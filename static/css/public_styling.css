@@ -367,3 +367,36 @@ form input:focus {
   margin: 20px auto 0px;
   padding: 20px 0px;
 }
+.single_post {
+  width: 60%;
+  border: #006384 1px solid;
+  margin-right: 10px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+.topics {
+	width: 30%;
+	border-radius: 6px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	margin-bottom: auto;
+}
+.topics div{
+	padding: 10px;
+	border-left: #006384 1px solid;
+	border-right: #006384 1px solid;	
+	border-bottom: #006384 1px solid;
+}
+.post_topics{
+	width: 100%;
+	display: flex;
+}
+.post_topics h2{
+	text-align: center;
+}
+.topics h2{
+	color: white;
+	background-color: #3E606F;
+	border-radius: 6px 6px 0px 0px;
+	padding: 10px;
+}
