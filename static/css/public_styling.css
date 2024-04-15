@@ -1,10 +1,13 @@
 /****************
 *** DEFAULTS
 *****************/
+/* Réinitialisation des marges et des rembourrages pour tous les éléments */
 * { margin: 0px; padding: 0px; }
 
+/* Définition de la hauteur de la balise HTML à 100% avec box-sizing pour inclure le rembourrage et la bordure */
 html { height: 100%; box-sizing: border-box; }
 
+/* Réglage de la position relative pour le corps, avec une marge inférieure pour le pied de page */
 body {
   position: relative;
   margin: 0;
@@ -12,15 +15,19 @@ body {
   min-height: 100%;
 }
 
-/* HEADINGS DEFAULT */
+/* STYLES PAR DÉFAUT POUR LES TITRES */
 h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive; }
 
+/* Suppression du soulignement par défaut pour les liens */
 a { text-decoration: none; }
 
+/* Espacement par défaut des paragraphes */
 p { margin:20px 0px; }
 
+/* Espacement par défaut pour les listes ordonnées et non ordonnées */
 ul, ol { margin-left: 40px; }
 
+/* Espacement par défaut pour la ligne horizontale */
 hr { margin: 10px 0px; opacity: .25; }
 
 
