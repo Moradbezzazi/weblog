@@ -78,6 +78,7 @@ function getAllTopics(){
         return $topics;
     } 
 }
+
 /**
 * This function returns the name and slug of a
 * category in an array

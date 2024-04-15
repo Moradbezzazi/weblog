@@ -69,7 +69,7 @@ $admins = getAdminUsers(); // by admin roles i mean (Admin or Author), table use
 
 			<?php if (empty($admins)) : ?>
 				<h1>No admins in the database.</h1>
-			<?php else : ?>
+			<?php else : ?>				
 				<table class="table">
 					<thead>
 						<th>N</th>
@@ -103,7 +103,9 @@ $admins = getAdminUsers(); // by admin roles i mean (Admin or Author), table use
 		<!-- // Display records from DB -->
 
 	</div>
-
+	<!-- Footer -->
+		<?php include(ROOT_PATH . '/includes/public/footer.php'); ?>
+	<!-- // Footer -->
 </body>
 
 </html>

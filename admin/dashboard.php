@@ -5,6 +5,7 @@
 </head>
 
 <body>
+	<?php //var_dump($_SESSION); ?>
 	<div class="header">
 		<div class="logo">
 			<a href="<?php echo BASE_URL . 'admin/dashboard.php' ?>">

@@ -33,8 +33,9 @@
     - - - - - - - - - - -*/
     // if user clicks the create admin button
     if (isset($_POST['create_admin'])) {
-        getAdminRoles(); // Add this line to retrieve admin roles
+        getAdminRoles();
         createAdmin($_POST);
+        
     }
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     * - Returns all admin users and their corresponding roles
@@ -89,7 +90,9 @@
         $email = mysqli_real_escape_string($conn, $request_values['email']);
         $password1 = mysqli_real_escape_string($conn, $request_values['password']);
         $password2 = mysqli_real_escape_string($conn, $request_values['passwordConfirmation']);
-        if (!isset($role_id) || empty($role_id)) { array_push($errors, "Role is required for admin users"); }
+        if (!isset($request_values['role_id'])) {
+             array_push($errors, "Role is required for admin users");
+             }
         else{
             $role_id = mysqli_real_escape_string($conn, $request_values['role_id']);
         }
@@ -133,6 +136,8 @@
             // Vérifier si l'insertion a réussi
             if (mysqli_affected_rows($conn) > 0) {
                 // Succès
+                $_SESSION["message"]="Admin user created successfully";
+                // array_push($_SESSION["message"], "Admin user created successfully");
                 return "Utilisateur administrateur créé avec succès";
             } else {
                 // Échec
@@ -181,6 +186,8 @@
             // Vérifier si l'insertion a réussi
             if (mysqli_affected_rows($conn) > 0) {
                 // Succès
+                // array_push($message, "Admin user updated successfully");
+                $_SESSION["message"]="Admin user updated successfully";
                 return "Utilisateur administrateur mis à jour avec succès";
             } else {
                 // Échec
@@ -193,12 +200,13 @@
         global $conn;
         $sql = "DELETE FROM users WHERE id=$admin_id";
         if (mysqli_query($conn, $sql)) {
-            return "Utilisateur administrateur supprimé avec succès";
+            $_SESSION["message"]="Utilisateur administrateur supprimé avec succès";
+            return "Utilisateur supprimé avec succès";
         } else {
             return "Erreur lors de la suppression de l'utilisateur administrateur";
         }
     }
 
 
-
 ?>
+
