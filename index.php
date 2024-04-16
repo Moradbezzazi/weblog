@@ -1,3 +1,8 @@
+// Auteurs: Morad BEZZAZI && Yasser GUERRAM
+// Version :V0
+// date de fin de projet : 16/04/2024
+// Encadré par M ADELL
+
 <?php include('config.php'); ?>
 <?php include('includes/public/head_section.php'); ?>
 <?php include("includes/public/registration_login.php"); ?>
